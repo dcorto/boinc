@@ -1,0 +1,34 @@
+version: "3.5"
+
+services:
+  boinc:
+    build:
+      context: .
+    container_name: boinc
+    hostname: boinc-from-docker
+    volumes:
+      - data:/opt/boinc
+    ports:
+      - 31416:31416
+    environment:
+      - CC_CONFIG_OPTIONS_NO_GPUS=1
+      - GP_RUN_ON_BATTERIES=0
+      - GP_RUN_USER_ACTIVE=1
+      - GP_RUN_GPU_USER_ACTIVE=0
+      - GP_LEAVE_APPS_MEMORY=0
+      - GP_SUSPEND_CPU_USAGE=25.000000
+      - GP_MAX_NCPUS_PCT=50.000000
+      - GP_CPU_USAGE_LIMIT=80.000000
+      - GP_CPU_SCHEDULING_PERIOD_MINUTES=60.000000
+      - GP_DISK_INTERVAL=60.000000
+      - GP_DISK_MAX_USED_GB=2.0
+      - GP_DISK_MAX_USED_PCT=50.000000
+      - GP_RAM_MAX_USED_BUSY_PCT=80.000000
+      - GP_RAM_MAX_USED_IDLE_PCT=80.000000
+      - GP_MAX_BYTES_SEC_UP=0.000000
+      - GP_MAX_BYTES_SEC_DOWN=0.000000
+      - REMOTE_HOSTS=remote.host.example,192.168.0.1,container_name
+      - REMOTE_AUTH=setHashHereOrUnSetForRandom
+
+volumes:
+  data:

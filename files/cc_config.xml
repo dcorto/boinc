@@ -1,0 +1,5 @@
+<cc_config>
+   <options>
+       <no_gpus>__CC_CONFIG_OPTIONS_NO_GPUS__</no_gpus>
+   </options>
+</cc_config>

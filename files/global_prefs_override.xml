@@ -1,0 +1,17 @@
+<global_preferences>
+  <run_on_batteries>__GP_RUN_ON_BATTERIES__</run_on_batteries>
+  <run_if_user_active>__GP_RUN_USER_ACTIVE__</run_if_user_active>
+  <run_gpu_if_user_active>__GP_RUN_GPU_USER_ACTIVE__</run_gpu_if_user_active>
+  <leave_apps_in_memory>__GP_LEAVE_APPS_MEMORY__</leave_apps_in_memory>
+  <suspend_cpu_usage>__GP_SUSPEND_CPU_USAGE__</suspend_cpu_usage>
+  <max_ncpus_pct>__GP_MAX_NCPUS_PCT__</max_ncpus_pct>
+  <cpu_usage_limit>__GP_CPU_USAGE_LIMIT__</cpu_usage_limit>
+  <cpu_scheduling_period_minutes>__GP_CPU_SCHEDULING_PERIOD_MINUTES__</cpu_scheduling_period_minutes>
+  <disk_interval>__GP_DISK_INTERVAL__</disk_interval>
+  <disk_max_used_gb>__GP_DISK_MAX_USED_GB__</disk_max_used_gb>
+  <disk_max_used_pct>__GP_DISK_MAX_USED_PCT__</disk_min_free_gb>
+  <ram_max_used_busy_pct>__GP_RAM_MAX_USED_BUSY_PCT__</ram_max_used_busy_pct>
+  <ram_max_used_idle_pct>__GP_RAM_MAX_USED_IDLE_PCT__</ram_max_used_idle_pct>
+  <max_bytes_sec_up>__GP_MAX_BYTES_SEC_UP__</max_bytes_sec_up>
+  <max_bytes_sec_down>__GP_MAX_BYTES_SEC_DOWN__</max_bytes_sec_down>
+</global_preferences>
