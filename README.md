@@ -1,7 +1,9 @@
 # Boinc on Docker
 
+[![](https://github.com/dcorto/boinc/actions/workflows/main.yml/badge.svg)](https://github.com/dcorto/boinc/actions/workflows/main.yml)
+
 [![](https://img.shields.io/docker/image-size/thedavis/boinc/1.0.0)](#)
-[![](https://img.shields.io/docker/pulls/thedavis/boic)](#)
+[![](https://img.shields.io/docker/pulls/thedavis/boinc)](#)
 
 ## Motivation
 
