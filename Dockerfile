@@ -3,11 +3,12 @@ FROM debian:buster-slim
 RUN groupadd -g 1000 boinc \
     && useradd -r -u 1000 -g boinc -s /usr/sbin/nologin -d /var/lib/boinc-client boinc \
     && apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install --no-install-recommends -y boinc-client tzdata \
+    && apt-get install --no-install-recommends -y ca-certificates boinc-client tzdata \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /opt/boinc \
-    && chown boinc:boinc -R /opt/boinc
+    && chown boinc:boinc -R /opt/boinc \
+    && update-ca-certificates --fresh
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chown boinc:boinc /entrypoint.sh && chmod +x /entrypoint.sh
