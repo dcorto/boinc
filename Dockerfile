@@ -1,14 +1,14 @@
-FROM debian:buster-slim
+FROM ubuntu:18.04
 
 RUN groupadd -g 1000 boinc \
     && useradd -r -u 1000 -g boinc -s /usr/sbin/nologin -d /var/lib/boinc-client boinc \
     && apt-get update && export DEBIAN_FRONTEND=noninteractive \
+    && apt-get upgrade -y \
     && apt-get install --no-install-recommends -y ca-certificates boinc-client tzdata \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /opt/boinc \
-    && chown boinc:boinc -R /opt/boinc \
-    && update-ca-certificates --fresh
+    && chown boinc:boinc -R /opt/boinc
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chown boinc:boinc /entrypoint.sh && chmod +x /entrypoint.sh
