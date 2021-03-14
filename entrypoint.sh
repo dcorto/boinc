@@ -4,9 +4,24 @@ if [ -z "${CC_CONFIG_OPTIONS_NO_GPUS}" ]; then
   CC_CONFIG_OPTIONS_NO_GPUS=1
 fi
 
+if [ -z "${CC_CONFIG_LOG_CPU_SCHED}" ]; then
+  CC_CONFIG_LOG_CPU_SCHED=0
+fi
+
+if [ -z "${CC_CONFIG_LOG_HTTP_DEBUG}" ]; then
+  CC_CONFIG_LOG_HTTP_DEBUG=0
+fi
+
+if [ -z "${CC_CONFIG_LOG_NETWORK_STATUS_DEBUG}" ]; then
+  CC_CONFIG_LOG_NETWORK_STATUS_DEBUG=0
+fi
+
 # parse cc_config.xml
 cp /tmp/cc_config.xml /tmp/cc_config.xml.dist
 sed -i 's/__CC_CONFIG_OPTIONS_NO_GPUS__/'${CC_CONFIG_OPTIONS_NO_GPUS}'/g' /tmp/cc_config.xml.dist
+sed -i 's/__CC_CONFIG_LOG_CPU_SCHED__/'${CC_CONFIG_LOG_CPU_SCHED}'/g' /tmp/cc_config.xml.dist
+sed -i 's/__CC_CONFIG_LOG_HTTP_DEBUG__/'${CC_CONFIG_LOG_HTTP_DEBUG}'/g' /tmp/cc_config.xml.dist
+sed -i 's/__CC_CONFIG_LOG_NETWORK_STATUS_DEBUG__/'${CC_CONFIG_LOG_NETWORK_STATUS_DEBUG}'/g' /tmp/cc_config.xml.dist
 mv /tmp/cc_config.xml.dist /opt/boinc/cc_config.xml
 
 # parse global_prefs_override.xml

@@ -4,7 +4,9 @@ RUN groupadd -g 1000 boinc \
     && useradd -r -u 1000 -g boinc -s /usr/sbin/nologin -d /var/lib/boinc-client boinc \
     && apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get upgrade -y \
-    && apt-get install --no-install-recommends -y ca-certificates boinc-client tzdata \
+    && apt-get install --no-install-recommends -y software-properties-common ca-certificates tzdata \
+    && add-apt-repository -y ppa:costamagnagianfranco/boinc \
+    && apt-get update && apt-get install -y --no-install-recommends boinc-client \
     && apt-get autoremove -y \
     && rm -rf /var/lib/apt/lists/* \
     && mkdir -p /opt/boinc \
