@@ -1,7 +1,5 @@
 # Boinc on Docker
 
-7.9.3 x86_64-pc-linux-gnu
-
 [![](https://github.com/dcorto/boinc/actions/workflows/main.yml/badge.svg)](https://github.com/dcorto/boinc/actions/workflows/main.yml)
 
 [![](https://img.shields.io/docker/image-size/thedavis/boinc/1.0.3)](#)
