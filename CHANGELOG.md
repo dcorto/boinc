@@ -9,7 +9,6 @@
   * CC_CONFIG_LOG_HTTP_DEBUG
   * CC_CONFIG_LOG_NETWORK_STATUS_DEBUG
 
-
 ## v1.0.2 - 08-03-2021
 
 * Change image from debian to ubuntu (fixes SSL bug on armhf builds with QEMU)
