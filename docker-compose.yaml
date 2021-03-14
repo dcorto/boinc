@@ -6,12 +6,16 @@ services:
       context: .
     container_name: boinc
     hostname: boinc-from-docker
+    pid: host
     volumes:
       - data:/opt/boinc
     ports:
       - 31416:31416
     environment:
       - CC_CONFIG_OPTIONS_NO_GPUS=1
+      - CC_CONFIG_LOG_CPU_SCHED=0
+      - CC_CONFIG_LOG_HTTP_DEBUG=0
+      - CC_CONFIG_LOG_NETWORK_STATUS_DEBUG=0
       - GP_RUN_ON_BATTERIES=0
       - GP_RUN_USER_ACTIVE=1
       - GP_RUN_GPU_USER_ACTIVE=0

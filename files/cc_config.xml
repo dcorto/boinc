@@ -2,4 +2,9 @@
    <options>
        <no_gpus>__CC_CONFIG_OPTIONS_NO_GPUS__</no_gpus>
    </options>
+   <log_flags>
+     <cpu_sched>__CC_CONFIG_LOG_CPU_SCHED__</cpu_sched>
+     <http_debug>__CC_CONFIG_LOG_HTTP_DEBUG__</http_debug>
+     <network_status_debug>__CC_CONFIG_LOG_NETWORK_STATUS_DEBUG__</network_status_debug>
+   </log_flags>
 </cc_config>

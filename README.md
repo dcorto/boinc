@@ -1,8 +1,10 @@
 # Boinc on Docker
 
+7.9.3 x86_64-pc-linux-gnu
+
 [![](https://github.com/dcorto/boinc/actions/workflows/main.yml/badge.svg)](https://github.com/dcorto/boinc/actions/workflows/main.yml)
 
-[![](https://img.shields.io/docker/image-size/thedavis/boinc/1.0.2)](#)
+[![](https://img.shields.io/docker/image-size/thedavis/boinc/1.0.3)](#)
 [![](https://img.shields.io/docker/pulls/thedavis/boinc)](#)
 
 ## Motivation
@@ -11,7 +13,9 @@ Running [BOINC](https://boinc.berkeley.edu/) is cool, but inside a Docker contai
 
 ## Versions and Docker images
 
-* `1.0.2`, `1.0`, `latest` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.0.1/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.0.2/CHANGELOG.md)
+* `1.0.3`, `1.0`, `latest` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.0.1/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.0.3/CHANGELOG.md)
+
+* `1.0.2` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.0.1/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.0.2/CHANGELOG.md)
 
 * `1.0.1` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.0.1/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.0.1/CHANGELOG.md)
 
@@ -22,7 +26,15 @@ Running [BOINC](https://boinc.berkeley.edu/) is cool, but inside a Docker contai
 ```
 $ docker build -t boinc .
 
-$ docker run -d --name boinc boinc
+$ cp .env.dist .env
+
+$ docker run -d \
+  --name boinc \
+  -p 31416:31416 \
+  --pid=host \
+  --env-file=.env \
+  -v boinc_data:/opt/boinc \
+  boinc
 
 # Attach to a BOINC project:
 
@@ -47,6 +59,12 @@ $ docker-compose up -d
 **CC_*** variables references over `cc_config.xml` file
 
 - CC_CONFIG_OPTIONS_NO_GPUS
+
+- CC_CONFIG_LOG_CPU_SCHED
+
+- CC_CONFIG_LOG_HTTP_DEBUG
+
+- CC_CONFIG_LOG_NETWORK_STATUS_DEBUG
 
 More info about [cc_config.xml](https://boinc.berkeley.edu/wiki/Client_configuration) on the BOINC Wiki
 
