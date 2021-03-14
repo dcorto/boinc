@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v1.0.3 - XX-03-2021
+## v1.0.3 - 14-03-2021
 
 * Use `ppa:costamagnagianfranco/boinc` for install boinc-client
 
