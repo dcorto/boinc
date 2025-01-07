@@ -42,24 +42,24 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Set image labels values
-        id: labels
-        run: |
-          echo ::set-output name=build_date::$(date -u +%Y-%m-%dT%H:%M:%SZ)
-          echo ::set-output name=vcs_ref::$(git rev-parse --short HEAD)
+#      - name: Set image labels values
+#        id: labels
+#        run: |
+#          echo ::set-output name=build_date::$(date -u +%Y-%m-%dT%H:%M:%SZ)
+#          echo ::set-output name=vcs_ref::$(git rev-parse --short HEAD)
 
-      - name: Build and push
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: ./Dockerfile
-          platforms: linux/amd64,linux/arm64, linux/arm/v7
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.docker_meta.outputs.tags }}
-          labels: ${{ steps.docker_meta.outputs.labels }}
-          build-args: |
-            BUILD_DATE=${{ steps.labels.outputs.build_date }}
-            VCS_REF=${{ steps.labels.outputs.vcs_ref }}
+#      - name: Build and push
+#        uses: docker/build-push-action@v2
+#        with:
+#          context: .
+#          file: ./Dockerfile
+#          platforms: linux/amd64,linux/arm64, linux/arm/v7
+#          push: ${{ github.event_name != 'pull_request' }}
+#          tags: ${{ steps.docker_meta.outputs.tags }}
+#          labels: ${{ steps.docker_meta.outputs.labels }}
+#          build-args: |
+#            BUILD_DATE=${{ steps.labels.outputs.build_date }}
+#            VCS_REF=${{ steps.labels.outputs.vcs_ref }}
 
       - name: Update DockerHub description
         #if: github.event_name != 'pull_request'
