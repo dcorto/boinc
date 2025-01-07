@@ -18,7 +18,7 @@ jobs:
 
       - name: Docker meta
         id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v5
+        uses: crazy-max/docker-metadata-action@v5
         with:
           images: thedavis/boinc
           tag-semver: |
