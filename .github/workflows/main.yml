@@ -1,6 +1,7 @@
 name: Docker Build & Publish
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'v*'
@@ -61,7 +62,7 @@ jobs:
             VCS_REF=${{ steps.labels.outputs.vcs_ref }}
 
       - name: Update DockerHub description
-        if: github.event_name != 'pull_request'
+        #if: github.event_name != 'pull_request'
         uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
