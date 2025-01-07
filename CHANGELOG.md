@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v1.1.0 - 06-01-2025
+## v1.1.0 - 07-01-2025
 
 * Upgrade to Ubuntu 24.04
 * Upgrade to BOINC 8.0.4
