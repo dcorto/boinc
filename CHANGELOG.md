@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.1.0 - 06-01-2025
+
+* Upgrade to Ubuntu 24.04
+* Upgrade to BOINC 8.0.4
+
 ## v1.0.3 - 14-03-2021
 
 * Use `ppa:costamagnagianfranco/boinc` for install boinc-client
