@@ -1,8 +1,11 @@
-FROM ubuntu:18.04
+FROM ubuntu:24.04
 
-RUN groupadd -g 1000 boinc \
-    && useradd -r -u 1000 -g boinc -s /usr/sbin/nologin -d /var/lib/boinc-client boinc \
-    && apt-get update && export DEBIAN_FRONTEND=noninteractive \
+RUN userdel -r -f ubuntu
+
+RUN groupadd -g 1000 boinc
+RUN useradd -r -u 1000 -g boinc -s /usr/sbin/nologin -d /var/lib/boinc-client boinc
+
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get upgrade -y \
     && apt-get install --no-install-recommends -y software-properties-common ca-certificates tzdata \
     && add-apt-repository -y ppa:costamagnagianfranco/boinc \
