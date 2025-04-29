@@ -2,7 +2,7 @@
 
 [![](https://github.com/dcorto/boinc/actions/workflows/main.yml/badge.svg)](https://github.com/dcorto/boinc/actions/workflows/main.yml)
 
-[![](https://img.shields.io/docker/image-size/thedavis/boinc/1.1.0)](#)
+[![](https://img.shields.io/docker/image-size/thedavis/boinc/1.1.1)](#)
 [![](https://img.shields.io/docker/pulls/thedavis/boinc)](#)
 
 ## Motivation
@@ -11,7 +11,9 @@ Running [BOINC](https://boinc.berkeley.edu/) is cool, but inside a Docker contai
 
 ## Versions and Docker images
 
-* `1.1.0`, `1.1`, `latest` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.0/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.0/CHANGELOG.md)
+* `1.1.1`, `1.1`, `latest` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.1/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.1/CHANGELOG.md)
+
+* `1.1.0` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.0/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.0/CHANGELOG.md)
 
 * `1.0.3`, `1.0` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.0.3/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.0.3/CHANGELOG.md)
 

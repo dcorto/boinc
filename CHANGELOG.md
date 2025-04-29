@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.1.1 - 29-04-2025
+
+* Upgrade base image Ubuntu 24.04
+
 ## v1.1.0 - 07-01-2025
 
 * Upgrade to Ubuntu 24.04
