@@ -11,7 +11,7 @@ Running [BOINC](https://boinc.berkeley.edu/) is cool, but inside a Docker contai
 
 ## Versions and Docker images
 
-* * `1.1.2`, `1.1`, `latest` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.2/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.2/CHANGELOG.md)
+* `1.1.2`, `1.1`, `latest` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.2/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.2/CHANGELOG.md)
 
 * `1.1.1` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.1/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.1/CHANGELOG.md)
 
