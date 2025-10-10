@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.1.2 - 10-10-2025
+
+* Upgrade BOINC 8.2.5
+
 ## v1.1.1 - 29-04-2025
 
 * Upgrade base image Ubuntu 24.04
