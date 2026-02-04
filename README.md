@@ -11,7 +11,9 @@ Running [BOINC](https://boinc.berkeley.edu/) is cool, but inside a Docker contai
 
 ## Versions and Docker images
 
-* `1.1.2`, `1.1`, `latest` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.2/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.2/CHANGELOG.md)
+* `1.1.3`, `1.1`, `latest` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.3/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.3/CHANGELOG.md)
+
+* `1.1.2` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.2/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.2/CHANGELOG.md)
 
 * `1.1.1` - [(Dockerfile)](https://github.com/dcorto/boinc/blob/v1.1.1/Dockerfile) - [CHANGELOG](https://github.com/dcorto/boinc/blob/v1.1.1/CHANGELOG.md)
 
@@ -40,7 +42,7 @@ $ docker run -d \
   -v boinc_data:/opt/boinc \
   boinc
 
-# Attach to a BOINC project:
+# Attach to a BOINC project:
 
 $ docker exec boinc boinccmd --project_attach <project_url> <token>
 
