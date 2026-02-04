@@ -2,8 +2,8 @@
 
 [![](https://github.com/dcorto/boinc/actions/workflows/main.yml/badge.svg)](https://github.com/dcorto/boinc/actions/workflows/main.yml)
 
-[![](https://img.shields.io/docker/image-size/thedavis/boinc/1.1.1)](#)
-[![](https://img.shields.io/docker/pulls/thedavis/boinc)](#)
+[![](https://img.shields.io/docker/image-size/thedavis/boinc/latest)](https://hub.docker.com/r/thedavis/boinc/latest)
+[![](https://img.shields.io/docker/pulls/thedavis/boinc)](https://hub.docker.com/r/thedavis/boinc)
 
 ## Motivation
 
