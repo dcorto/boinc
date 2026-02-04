@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.1.3 - 04-02-2026
+
+* Upgrade BOINC 8.2.8
+
 ## v1.1.2 - 10-10-2025
 
 * Upgrade BOINC 8.2.5
