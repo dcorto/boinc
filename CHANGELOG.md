@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v1.1.4 - 05-05-2026
+
+* Upgrade base image
+
 ## v1.1.3 - 04-02-2026
 
 * Upgrade BOINC 8.2.8
